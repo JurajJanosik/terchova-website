@@ -1,0 +1,597 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-btn,
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #333;
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 15px;
+  color: #009858;
+}
+
+.lang-switcher {
+  margin-right: 15px;
+  padding: 3px;
+  font-size: 14px;
+}
+
+
+.login-link {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+nav {
+  background-color: #009858;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  color: #15395a;
+  margin-bottom: 1.5rem;
+}
+
+
+
+footer {
+  background-color: #15395a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+#datetime {
+  color: #fff;
+  margin-left: auto;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  /* prispôsob výške .topbar */
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 0;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #006400;
+}
+
+/* ===== Vyhľadávací box ===== */
+.search-box {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.search-box input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  margin-left: 5px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-box button:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-item-with-submenu {
+  position: relative;
+}
+
+.nav-item-with-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 6px;
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.nav-item-with-submenu:hover .submenu {
+  display: flex;
+}
+
+.submenu a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.submenu a:last-child {
+  border-bottom: none;
+}
+
+.submenu a:hover {
+  background-color: #f2f2f2;
+  color: #009858;
+}
+
+.submenu-item-with-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submenu-item-with-submenu > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.submenu-item-with-submenu > a::after {
+  content: "\25B6"; /* Unicode pre ▶ */
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.sub-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  border-radius: 6px;
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.submenu-item-with-submenu:hover .sub-submenu {
+  display: flex;
+}
+
+.sub-submenu a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-submenu a:last-child {
+  border-bottom: none;
+}
+
+.sub-submenu a:hover {
+  background-color: #f2f2f2;
+  color: #009858;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-image-large {
+  width: 300px;
+}
+
+.footer-partners,
+.footer-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-partners img,
+.footer-projects img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.footer-partners img:hover,
+.footer-projects img:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+ body.uht-body-scope { /* Pridaná trieda pre body pre lepšiu izoláciu, ak testujete samostatne */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Predpokladané pozadie stránky */
+            color: #333;
+        }
+
+        .uht-container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* Biele pozadie pre hlavný obsahový blok */
+            display: flex;
+            gap: 30px;
+        }
+
+        .uht-main-content {
+            flex: 3; /* Hlavný obsah zaberie viac miesta */
+        }
+
+        .uht-sidebar {
+            flex: 1; /* Bočný panel */
+            font-size: 0.9em;
+        }
+
+        /* Hlavička hlavného obsahu */
+        .uht-header-top {
+            display: flex;
+            align-items: flex-start; /* Zarovnanie ikony hore */
+            margin-bottom: 15px;
+        }
+        .uht-facebook-icon {
+            margin-right: 15px;
+            /* Veľkosť ikony by ste si nastavili podľa obrázku */
+        }
+        .uht-facebook-icon img {
+            width: 24px; /* Príklad veľkosti */
+            height: 24px;
+        }
+
+        .uht-page-title {
+            font-size: 2em;
+            color: #333;
+            margin-top: 0; /* Ak je ikona vedľa, tak zarovnať */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .uht-office-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .uht-office-details h2 {
+            font-size: 1.4em;
+            color: #444;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .uht-office-details p {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .uht-office-clock-image img {
+            max-width: 150px; /* Prispôsobte podľa potreby */
+            height: auto;
+            border: 1px solid #ddd;
+        }
+
+        .uht-related-link {
+            margin-bottom: 30px;
+            font-size: 0.95em;
+        }
+        .uht-related-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .uht-related-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tabuľka úradných hodín */
+        .uht-office-hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+        .uht-office-hours-table th,
+        .uht-office-hours-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .uht-office-hours-table th {
+            background-color: #8BC34A; /* Zelená z obrázka */
+            color: #333; /* Tmavý text na zelenom pozadí */
+            font-weight: bold;
+        }
+        .uht-office-hours-table td.uht-day-column {
+            background-color: #8BC34A; /* Zelená pre stĺpec s dňami */
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Zoznam oddelení */
+        .uht-departments-info h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .uht-departments-info ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .uht-departments-info ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Mapa */
+        .uht-map-section {
+            margin-top: 30px;
+        }
+        .uht-map-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .uht-map-container {
+            width: 100%;
+            height: 350px; /* Prispôsobte výšku */
+            background-color: #e0e0e0; /* Placeholder pre mapu */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+        }
+        .uht-map-buttons { /* Naznačené tlačidlá pre mapu/satelit */
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        .uht-map-buttons button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+         .uht-map-buttons button.uht-active {
+            background-color: #ddd;
+            font-weight: bold;
+        }
+
+
+        /* Sidebar štýly */
+        .uht-sidebar-widget {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .uht-sidebar-widget h3 {
+            font-size: 1.1em;
+            color: #38761d; /* Tmavšia zelená pre nadpisy v sidebare */
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Najnovšie články */
+        .uht-latest-articles ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .uht-latest-articles ul li {
+            margin-bottom: 8px;
+        }
+        .uht-latest-articles ul li a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .uht-latest-articles ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Novinky do emailu */
+        .uht-newsletter-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .uht-newsletter-form input[type="text"],
+        .uht-newsletter-form input[type="email"] {
+            width: calc(100% - 20px); /* 100% mínus padding */
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .uht-newsletter-form button {
+            background-color: #8BC34A; /* Zelené tlačidlo */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        .uht-newsletter-form button:hover {
+            background-color: #79a83b;
+        }
+        .uht-newsletter-form p {
+            font-size: 0.85em;
+            color: #666;
+            margin-top:0;
+            margin-bottom: 10px;
+        }
+
+
+        /* Najnovšie fotografie */
+        .uht-photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .uht-photo-gallery img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            display: block;
+        }
+        .uht-photo-gallery figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            color: #555;
+            margin-top: 3px;
+        }
+
+        /* Responzivita */
+        @media (max-width: 992px) {
+            .uht-container {
+                flex-direction: column;
+            }
+            .uht-office-info {
+                flex-direction: column;
+            }
+            .uht-office-clock-image {
+                margin-top: 15px;
+                align-self: center;
+            }
+        }
+        @media (max-width: 600px) {
+             .uht-page-title {
+                font-size: 1.6em;
+            }
+            .uht-office-hours-table th,
+            .uht-office-hours-table td {
+                padding: 6px;
+                font-size: 0.85em;
+            }
+             .uht-main-content, .uht-sidebar {
+                font-size: 0.95em; /* Celkové zmenšenie písma pre malé obrazovky */
+            }
+            .uht-newsletter-form input[type="text"],
+            .uht-newsletter-form input[type="email"] {
+                 width: 100%; /* Na mobiloch môžu byť inputy na 100% */
+            }
+        }

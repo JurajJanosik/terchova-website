@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obec Terchová</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="janosikovediery.css">
+    <script defer src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="topbar">
+        <div class="left-section">
+            <button class="menu-btn">☰ Menu</button>
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="center-section">
+            <a class="logo-container">
+                <img src="/images/logo-terchova.png" alt="Logo Terchová" class="logo-img">
+            </a>
+        </div>
+        <div class="right-section">
+            <a href="https://www.facebook.com/terchova" target="_blank" class="social-icon">f</a>
+            <select class="lang-switcher">
+                <option value="sk" data-image="images/sk.png">Slovenčina</option>
+                <option value="en" data-image="images/en.png">English</option>
+            </select>
+            <a href="/login.html" class="login-link">Prihlásiť</a>
+        </div>
+    </div>
+
+    <nav id="mainNav">
+        <a href="index.html">Aktuality</a>
+        <div class="nav-item-with-submenu">
+            <a href="obcan.html">Občan</a>
+            <div class="submenu">
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Samospráva</a>
+                    <div class="sub-submenu">
+                        <a href="starosta.html">Starosta obce</a>
+                        <a href="zastupca.html">Zástupca starostu</a>
+                        <a href="poslanci.html">Poslanci OZ</a>
+                        <a href="#">Účasť na zasadnutiach</a>
+                        <a href="#">Obecná rada</a>
+                        <a href="#">Komisie OZ</a>
+                        <a href="#">Hlavný kontrolór</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Úrad</a>
+                    <div class="sub-submenu">
+                        <a href="uradne.html">Úradné hodiny</a>
+                        <a href="#">Prednostá úradu</a>
+                        <a href="#">Kontakty OÚ</a>
+                        <a href="#">Symboly obce</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Dokumenty obce</a>
+                    <div class="sub-submenu">
+                        <a href="#">PHSR obce</a>
+                        <a href="#">Územný plán</a>
+                        <a href="#">Obecné noviny</a>
+                        <a href="#">Štatút obce</a>
+                        <a href="#">Formuláre a žiadosti</a>
+                    </div>
+                </div>
+
+                <a href="#">Úradná tabuľa</a>
+                <a href="#">Nájomné byty</a>
+                <a href="#">Verejná vyhláška</a>
+                <a href="#">Zbierka nápadov</a>
+                <a href="#">Voľby</a>
+                <a href="#">Odvoz odpadu</a>
+                <a href="#">Odstavky elektr. energie</a>
+                <a href="#">Poruchy verjn. osvetlenia</a>
+            </div>
+        </div>
+        <div class="nav-item-with-submenu">
+            <a href="#">Návštevník</a>
+            <div class="submenu">
+                <div class="submenu-item-with-submenu">
+                    <a href="#">História</a>
+                    <div class="sub-submenu">
+                        <aa href="#">Obec</a>
+                        <a href="#">Zápis do UNESCO</a>
+                        <a href="#">Významní rodáci</a>
+                        <a href="#">Kostol</a>
+                        <a href="#">Betlehem</a>
+                        <a href="#">Vysťahovalectvo</a>
+
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Obec</a>
+                    <div class="sub-submenu">
+                        <a href="#">Informácie o obci</a>
+                        <a href="autobusy.html">Autobusy</a>
+                        <a href="#">Mapy</a>
+                    </div>
+                </div>
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Turistické trasy</a>
+                    <div class="sub-submenu">
+                        <a href="janosikovediery.html">Jánošíkove diery</a>
+                        <a href="#">Veľký Rozsutec</a>
+                        <a href="#">Malý Rozsutec</a>
+                        <a href="#">Zbojnícky chodník</a>
+                        <a href="#">Jánošíkovym chotárom</a>
+                        <a href="#">Veľký Kriváň</a>
+                        <a href="#">Poludňový Grúň</a>
+                        <a href="#">Kraviarske</a>
+                        <a href="#">Stoh</a>
+                        <a href="#">Boboty</a>
+                        <a href="#">Sokolie</a>
+
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Turizmus</a>
+                    <div class="sub-submenu">
+                        <a href="#">NP Malá Fatra</a>
+                        <a href="#">Tiesňavy</a>
+                        <a href="#">Vrátna dolina</a>
+                        <a href="#">Mapy</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Atrakcie obce</a>
+                    <div class="sub-submenu">
+                        <a href="#">Socha Jánošíka</a>
+                        <a href="#">Jánošíkov dom</a>
+                        <a href="#">Rozhľadňa a náučný chodník</a>
+                        <a href="#">Drevený betlehem</a>
+                        <a href="#">Turistický vláčik</a>
+                        <a href="#">Minimodel €uropa</a>
+                        <a href="#">Lanový park</a>
+                        <a href="#">Kolobežky</a>
+                        <a href="#">Escape room</a>
+                        <a href="#">Krížová cesta</a>
+                    </div>
+                </div>
+                <a href="#">Cykloturistika</a>
+                <a href="#">Turistická kancelária</a>
+                <a href="#">Múzeum J. Jánošíka</a>
+                <a href="#">Kostol a sv. omše</a>
+            </div>
+        </div>
+        <div class="nav-item-with-submenu">
+            <a href="#">Podujatia</a>
+            <div class="submenu">
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Jánošíkove dni</a>
+                    <div class="sub-submenu">
+                        <a href="#">Stánkový predaj</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Cyrilometodské dni</a>
+                    <div class="sub-submenu">
+                        <a href="#">2024</a>
+                        <a href="#">2023</a>
+                        <a href="#">2022</a>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Gazdovské kone</a>
+                    <div class="sub-submenu">
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Halušky Terchová</a>
+                    <div class="sub-submenu">
+                        <a href="#">2025</a>
+                        <a href="#">2024</a>
+                        <a href="#">2023</a>
+                        <a href="#">2022</a>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Stretnutie zbojníkov</a>
+                    <div class="sub-submenu">
+                        <a href="#">2024</a>
+                        <a href="#">2023</a>
+                        <a href="#">2022</a>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Polmaratón</a>
+                    <div class="sub-submenu">
+                        <a href="#">2022</a>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Ostatné podujatia</a>
+                    <div class="sub-submenu">
+                        <a href="#">2025</a>
+                        <a href="#">2024</a>
+                        <a href="#">2023</a>
+                        <a href="#">2022</a>
+                        <a href="#">2021</a>
+                        <a href="#">2020</a>
+                        <a href="#">2019</a>
+                        <a href="#">2018</a>
+                        <a href="#">2017</a>
+                        <a href="#">2016</a>
+                        <a href="#">2015</a>
+                    </div>
+                </div>
+
+                <div class="submenu-item-with-submenu">
+                    <a href="#">Archív podujatí</a>
+                    <div class="sub-submenu">
+                        <a href="#">Rozmarin</a>
+                        <a href="#">Terchovský Budzogáň</a>
+                        <a href="#">Country Terchová</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav-item-with-submenu">
+            <a href="#">Služby</a>
+            <div class="submenu">
+                <a href="#">Denné centrum</a>
+                <a href="#">RIC Terchovec</a>
+                <a href="#">Ubytovanie</a>
+                <a href="#">Obchody</a>
+                <a href="#">Stravovanie</a>
+            </div>
+        </div>
+
+        <a href="#">Fotogaléria</a>
+        <a href="#">Videogaléria</a>
+
+        <div id="datetime"></div>
+    </nav>
+
+    <!-- <nav id="mainNav">
+        <a href="index.html">Aktuality</a>
+        <a href="#">Občan</a>
+        <a href="#">Návštevník</a>
+        <a href="podujatia.html">Podujatia</a>
+        <a href="#">Služby</a>
+        <a href="#">Fotogaléria</a>
+        <a href="#">Videogaléria</a>
+        <div id="datetime"></div>
+    </nav>  -->
+
+    <!-- Vyhľadávací box -->
+    <div class="search-box" id="searchBox" style="display: none;">
+        <form action="/hladat" method="get">
+            <input type="text" name="q" placeholder="Hľadať..." />
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            function formatLangOption(option) {
+                if (!option.id) return option.text;
+                const imgUrl = $(option.element).data('image');
+                if (!imgUrl) return option.text;
+                return $(`
+                    <span style="display: flex; align-items: center;">
+                        <img src="${imgUrl}" style="width: 20px; height: 14px; margin-right: 8px; border-radius: 2px;">
+                        ${option.text}
+                    </span>
+                `);
+            }
+
+            $('.lang-switcher').select2({
+                templateResult: formatLangOption,
+                templateSelection: formatLangOption,
+                minimumResultsForSearch: Infinity
+            });
+        });
+    </script>
+
+    
+
+    <a href="#" class="scroll-to-top" title="Nahor">^</a>
+
+    <div class="container">
+        <header>
+            <p class="header-subtitle">TURISTICKÉ TRASY</p>
+            <h1>Jánošíkove diery</h1>
+        </header>
+
+        <section class="main-image-section">
+            <img src="images/janosikove.jpg" alt="Jánošíkove diery - mostík ponad vodopád">
+        </section>
+
+        <div class="content-wrapper">
+            <main class="main-content">
+                <article>
+                    <h2>Pozrite si projekt obnovy Jánošíkových dier</h2>
+                    <p>Jánošíkove diery alebo len Diery je sústava tiesňav a kaňonov v Krivánskej Malej Fatre. Jánošíkove diery sa nachádzajú v národnej prírodnej rezervácii Rozsutec. Skladajú sa z troch ucelených častí: Dolné diery, Nové diery a Horné diery. Preteká nimi Dierový potok, ktorý ich vyformoval. V Dierach sa nachádza viac ako dvadsať vodopádov, ktoré spolu vytvárajú Vodopády Dierového potoka. Bizarné skalné útvary so špecifickou klímou sú domovom viacerých zaujímavých druhov rastlín a živočíchov.</p>
+                    <p>Východiskom do Dier sú osady patriace do katastrálneho územia obce Terchová - Štefanová a Biely Potok. V Dolných dierach je vybudovaný náučný chodník. Horné diery sú v zimnom období uzatvorené. Jánošíkove diery sú prístupné atraktívnymi značenými turistickými chodníkmi s lávkami, rebríkmi a reťazami. V roku 2009 sa začala kompletná výmena oceľových konštrukcií na tejto trase.</p>
+                </article>
+
+                <img src="images/diery1-fit-890x668.jpg" alt="Chodník s rebríkom v Jánošíkových dierach" class="content-image">
+
+                <section id="dolne-diery">
+                    <h2>Dolné diery</h2>
+                    <p>Dolné diery sú sprístupnené náučným chodníkom. Nachádzajú sa v nich dva vodopády (1 m a 3,5 m), ktoré sú súčasťou vodopádov Dierového potoka. Bizarné skalné útvary so špecifickou klímou sú domovom viacerých zaujímavých druhov rastlín a živočíchov.</p>
+                </section>
+
+                <section id="nove-diery">
+                    <h2>Nové diery</h2>
+                    <p>Tiesňava Nové diery sa nachádza v národnej prírodnej rezervácii Rozsutec. Vybieha z Dolných dier proti prúdu menšieho prítoku Dierového potoka. Nachádzajú sa tu 4 vodopády s výškou 1 až 2 metre, ktoré sú súčasťou prírodnej pamiatky Vodopády Dierového potoka. Pomenovanie dostali podľa toho, že boli z celej sústavy Jánošíkových dier sprístupnené ako posledné. Bizarné skalné útvary so špecifickou klímou sú domovom viacerých zaujímavých druhov rastlín a živočíchov.</p>
+                </section>
+
+                <img src="images/diery2.jpg" alt="Úzky priechod v Nových dierach" class="content-image">
+
+                <section id="horne-diery">
+                    <h2>Horné diery</h2>
+                    <p>Horné diery je tiesňava Diery medzi vrchmi Veľký Rozsutec a Malý Rozsutec v národnej prírodnej rezervácii Rozsutec. Potok prekonáva prudké klesanie sústavou deviatich vodopádov s výškou 2 m až 4 m, ktoré tvoria prírodnú pamiatku Vodopády Dierového potoka. Horné diery sú pri veľkých dažďoch nepriechodné, pretože sa dajú zdolať iba pomocou rebríkov, reťazí a lávok. Uzavreté sú aj v zimnom období. Vynikajú bohatstvom živočíšnych a rastlinných druhov obľubujúcich chladné a vlhké ekosystémy.</p>
+                </section>
+
+                <section class="tourist-info">
+                    <h3>Opis turistickej trasy:</h3>
+                    <table>
+                        <tr>
+                            <th>Trvanie trasy:</th>
+                            <td>3,5hod - 4,5 hod.</td>
+                        </tr>
+                        <tr>
+                            <th>Východiskový bod trasy:</th>
+                            <td>Parkovisko pri hoteli Diery časť Terchová - Biely Potok, parkovisko Štefanová</td>
+                        </tr>
+                        <tr>
+                            <th>Cieľový bod trasy:</th>
+                            <td>Parkovisko pri hoteli Diery časť Terchová - Biely Potok, parkovisko Štefanová</td>
+                        </tr>
+                        <tr>
+                            <th>Náročnosť:</th>
+                            <td>Trasa Dolné diery je napriek rebríkom pomerne nenáročná a bežne ňou chodia aj deti. S deťmi sa však neodporúča vydať na Malý Rozsutec.</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="map-links">
+                    <p><a href="https://www.terchova.sk/images/stories/turizmus/mapky/mapa-diery.jpg">Mapa dier</a></p>
+                    <p><a href="https://www.terchova.sk/images/stories/turizmus/diery-mapa.jpg">Mapa dier 2</a></p>
+                </section>
+
+                <section class="video-section">
+                    <h3>Video z Jánošíkových dier</h3>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://youtu.be/qPxCvYH9Ag8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </section>
+
+                <section class="map-section">
+                    <h3>Mapa</h3>
+                    <img src="placeholder_map_image.jpg" alt="Mapa Jánošíkove diery a okolie">
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <section class="sidebar-widget">
+                    <h4>Najnovšie články</h4>
+                    <ul>
+                        <li><a href="#">Plán činnosti a aktivít Denného centra pre jún 2025</a></li>
+                        <li><a href="#">Cyklistické podujatie „Od Tatier k Dunaju“ v Terchovej – fotogaléria</a></li>
+                        <li><a href="#">Atmosféra Jánošíkových dní 2024 – ochutnávka toho, čo nás čaká v roku 2025!</a></li>
+                        <li><a href="#">Deň detí v Terchovej – nedeľa plná zábavy a smiechu</a></li>
+                        <li><a href="#">Uvítanie detí do života 2025 - foto</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-widget">
+                    <h4>Novinky do emailu</h4>
+                    <p>Dostávajte informácie o novinkách z nášho webu pravidelne raz týždenne do emailu.</p>
+                    <form action="#" method="post">
+                        <label for="name">Vaše meno</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Odoberať</button>
+                    </form>
+                </section>
+
+                <section class="sidebar-widget">
+                    <h4>Najnovšie fotografie</h4>
+                    <div class="photo-gallery">
+                        <img src="images/1.jpg" alt="Náhľad fotografie 1">
+                        <img src="images/2.jpg" alt="Náhľad fotografie 2">
+                        <img src="images/3.jpg" alt="Náhľad fotografie 3">
+                        <img src="images/4.jpg" alt="Náhľad fotografie 4">
+                    </div>
+                    <p class="gallery-caption">Cyklistické podujatie...</p>
+                </section>
+            </aside>
+        </div>
+        </div>
+
+    <footer>
+        <div class="footer-logo-center">
+            <img src="images/erb.png" alt="Erb obce Terchová">
+        </div>
+
+        <div class="footer-container">
+
+            <!-- UNESCO -->
+            <div class="footer-column">
+                <h3>Zápis do UNESCO</h3>
+                <a href="https://example.com/unesco" target="_blank">
+                    <img src="images/unesco.png" alt="UNESCO Terchovská muzika" class="footer-image-large">
+                </a>
+            </div>
+
+            <!-- Partneri -->
+            <div class="footer-column">
+                <h3>Partneri</h3>
+                <div class="footer-partners">
+                    <a href="https://example.com/terchovska-muzika" target="_blank"><img
+                            src="images/terchovska muzika.png" alt="Terchovská muzika"></a>
+                    <a href="https://example.com/vratna" target="_blank"><img src="images/vratna.png" alt="Vrátna"></a>
+                    <a href="https://example.com/terchovec" target="_blank"><img
+                            src="images/ric_terchovec_aquapark_terchova.png" alt="Terchovec"></a>
+                    <a href="https://example.com/mala-fatra" target="_blank"><img
+                            src="images/logo_mala_fatra_new_biele.png" alt="Malá Fatra"></a>
+                    <a href="https://example.com/terchovska-dolina" target="_blank"><img
+                            src="images/terchovska-dolina.png" alt="Terchovská dolina"></a>
+                    <a href="https://example.com/beskydy" target="_blank"><img src="images/beskydy.png"
+                            alt="Euroregion Beskydy"></a>
+                    <a href="https://example.com/cyril-metod" target="_blank"><img src="images/cms_logo_sk_bile.png"
+                            alt="Cyrilo-metodská cesta"></a>
+                    <a href="https://example.com/hzs" target="_blank"><img src="images/hzs-logo-300x300.png"
+                            alt="Horská záchranná služba"></a>
+                </div>
+            </div>
+
+
+
+            <!-- Projekty -->
+            <div class="footer-column">
+                <h3>Ostatné odkazy / projekty</h3>
+                <div class="footer-projects">
+                    <a href="https://example.com/osvetlenie" target="_blank"><img src="images/verejne-osvetlenie.png"
+                            alt="Osvetlenie"></a>
+                    <a href="https://example.com/naturpack" target="_blank"><img
+                            src="images/banner_200x200_ozv_naturpack.gif" alt="Natur-pack"></a>
+                    <a href="https://example.com/fond-sportu" target="_blank"><img src="images/logo_fond_sportu.png"
+                            alt="Fond športu"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

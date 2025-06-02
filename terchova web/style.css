@@ -1,0 +1,583 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-btn,
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #333;
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 15px;
+  color: #009858;
+}
+
+.lang-switcher {
+  margin-right: 15px;
+  padding: 3px;
+  font-size: 14px;
+}
+
+
+.login-link {
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+nav {
+  background-color: #009858;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  color: #15395a;
+  margin-bottom: 1.5rem;
+}
+
+
+
+footer {
+  background-color: #15395a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+#datetime {
+  color: #fff;
+  margin-left: auto;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  /* prispôsob výške .topbar */
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 0;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  color: #006400;
+}
+
+/* ===== Vyhľadávací box ===== */
+.search-box {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.search-box input[type="text"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  margin-left: 5px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-box button:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-item-with-submenu {
+  position: relative;
+}
+
+.nav-item-with-submenu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 6px;
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.nav-item-with-submenu:hover .submenu {
+  display: flex;
+}
+
+.submenu a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.submenu a:last-child {
+  border-bottom: none;
+}
+
+.submenu a:hover {
+  background-color: #f2f2f2;
+  color: #009858;
+}
+
+.submenu-item-with-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.submenu-item-with-submenu > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.submenu-item-with-submenu > a::after {
+  content: "\25B6"; /* Unicode pre ▶ */
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.sub-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  border-radius: 6px;
+  padding: 10px 0;
+  flex-direction: column;
+}
+
+.submenu-item-with-submenu:hover .sub-submenu {
+  display: flex;
+}
+
+.sub-submenu a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-submenu a:last-child {
+  border-bottom: none;
+}
+
+.sub-submenu a:hover {
+  background-color: #f2f2f2;
+  color: #009858;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-image-large {
+  width: 300px;
+}
+
+.footer-partners,
+.footer-projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-partners img,
+.footer-projects img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.footer-partners img:hover,
+.footer-projects img:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+:root {
+        --primary-font: 'Arial', sans-serif;
+        --text-color: #333;
+        --light-text-color: #fff;
+        --card-bg: #fff;
+        --body-bg: #f4f4f4;
+        --border-color: #eee;
+        --tag-bg-denne-centrum: #5a5a5a;
+        --tag-bg-aktuality: #007bff;
+        --tag-bg-janosikove-dni: #28a745;
+        --tag-bg-ine-podujatia: #ffc107;
+        --tag-bg-halusky: #dc3545;
+        --date-color: #777;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        background-color: var(--body-bg);
+        margin: 0; /* Odstráni predvolený margin prehliadača */
+        /* padding: 20px; */ /* ODSTRÁNENÉ - toto mohlo spôsobovať problém */
+        color: var(--text-color);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto; /* ZMENENÉ: Pridaný horný/dolný margin 20px, auto pre centrovanie do strán */
+        display: flex;
+        gap: 20px;
+    }
+
+    .main-content {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .featured-articles {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 20px;
+    }
+
+    .article-card, .featured-card {
+        background-color: var(--card-bg);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .featured-card {
+        position: relative;
+        color: var(--light-text-color);
+        height: 400px;
+    }
+
+    .featured-card .image-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .featured-card .image-placeholder::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%);
+    }
+
+    .featured-card .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .featured-card .tag {
+        background-color: rgba(0,0,0,0.5);
+        color: var(--light-text-color);
+        padding: 5px 10px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .featured-card.denne-centrum .tag { background-color: var(--tag-bg-denne-centrum); }
+    .featured-card.aktuality .tag { background-color: var(--tag-bg-aktuality); }
+
+
+    .featured-card h2 {
+        font-size: 1.8em;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .featured-card .date {
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+
+    .recent-articles {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .article-card .image-placeholder-small {
+        width: 100%;
+        height: 180px;
+        background-color: #e0e0e0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .article-card .content {
+        padding: 15px;
+    }
+
+    .article-card .tag {
+        padding: 4px 8px;
+        font-size: 0.75em;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 8px;
+        color: var(--light-text-color);
+        text-transform: uppercase;
+    }
+
+    .article-card.janosikove-dni .tag { background-color: var(--tag-bg-janosikove-dni); }
+    .article-card.ine-podujatia .tag { background-color: var(--tag-bg-ine-podujatia); color: #333; }
+    .article-card.aktuality .tag { background-color: var(--tag-bg-aktuality); }
+
+
+    .article-card h3 {
+        font-size: 1.2em;
+        margin: 0 0 8px 0;
+        line-height: 1.3;
+    }
+
+    .article-card .excerpt {
+        font-size: 0.9em;
+        color: #555;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+    .article-card .date {
+        font-size: 0.8em;
+        color: var(--date-color);
+    }
+
+    .sidebar {
+        flex: 1;
+        background-color: var(--card-bg);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        height: fit-content;
+    }
+
+    .sidebar-event {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+        text-decoration: none;
+        color: inherit;
+    }
+    .sidebar-event:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .sidebar-event .image-placeholder-tiny {
+        width: 80px;
+        height: 80px;
+        background-color: #e0e0e0;
+        border-radius: 4px;
+        flex-shrink: 0;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .sidebar-event .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-event .tag {
+        font-size: 0.7em;
+        color: var(--text-color);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .sidebar-event.janosikove-dni .tag { color: var(--tag-bg-janosikove-dni); }
+    .sidebar-event.ine-podujatia .tag { color: var(--tag-bg-ine-podujatia); }
+    .sidebar-event.halusky .tag { color: var(--tag-bg-halusky); }
+
+
+    .sidebar-event h4 {
+        font-size: 1em;
+        margin: 0 0 5px 0;
+        line-height: 1.3;
+    }
+
+    .sidebar-event .date {
+        font-size: 0.8em;
+        color: var(--date-color);
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: var(--light-text-color);
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 4px;
+        font-size: 1.5em;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .scroll-to-top:hover {
+        background-color: #555;
+    }
+
+    @media (max-width: 992px) {
+        .container {
+            flex-direction: column;
+            margin-left: 15px; /* Pridanie malého odsadenia na menších obrazovkách */
+            margin-right: 15px;
+        }
+        .featured-articles {
+            grid-template-columns: 1fr;
+        }
+        .featured-card {
+            height: 300px;
+        }
+    }
+    @media (max-width: 768px) {
+        .recent-articles {
+            grid-template-columns: 1fr;
+        }
+         .featured-card h2 {
+            font-size: 1.5em;
+        }
+        .container {
+            margin-left: 10px;
+            margin-right: 10px;
+            gap: 15px; /* Menší gap na mobiloch */
+        }
+        .main-content, .featured-articles, .recent-articles {
+            gap: 15px; /* Menší gap na mobiloch */
+        }
+    }
